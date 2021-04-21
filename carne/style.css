@@ -38,3 +38,9 @@ body {
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
 
+h1
+
+.hlavni-recept {
+    background-image:url(images/burger.jpg);
+}
+
