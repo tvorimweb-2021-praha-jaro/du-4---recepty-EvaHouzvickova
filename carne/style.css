@@ -21,6 +21,7 @@ středně široké obrazovky:
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    text-shadow: 1px 1px 5px black;
 }
 
 .paticka {
@@ -38,19 +39,89 @@ body {
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
 
+:root {
+    --color:white;
+}
 
 h1 {
     font-family:'Raleway', sans-serif;
     font-weight: 800;
+    font-size: 1.75rem;
+    position: absolute;
+    bottom:0;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.5rem;
 }
 
 h3 {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 0.8rem;
+    margin-top: 0;
+}
+
+.hlavni-recept {
+    background-image: url(images/burger.jpg);
+    min-height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    padding: 0.5rem;
+    color: var(--color);
+}
+
+.pravy {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+}
+
+.levy {
+    position: absolute;
+}
+
+.recept-2 {
+    --pozadi: url(images/sushi.jpg);
+}
+
+.recept-3 {
+    --pozadi: url(images/rajcata.jpg);
+}
+
+.recept-4 {
+    --pozadi: url(images/kure.jpg);
+}
+
+.recept-5 {
+    --pozadi: url(images/grilovani.jpg);
+}
+
+.recept-2, 
+.recept-3, 
+.recept-4,
+.recept-5 {
+    background-image: var(--pozadi);
+    min-height: 90px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--color);
+    position: relative;
+    padding: 0.5rem;
+    border-top: solid 0.1rem;
+}
+
+.paticka {
+    display: none;
 }
