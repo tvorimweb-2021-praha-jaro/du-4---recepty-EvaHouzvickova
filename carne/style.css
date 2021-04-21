@@ -69,7 +69,7 @@ h3 {
 }
 
 .hlavni-recept {
-    background-image: url(images/burger.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(images/burger.jpg);
     min-height: 200px;
     width: 100%;
     background-size: cover;
@@ -110,7 +110,7 @@ h3 {
 .recept-3, 
 .recept-4,
 .recept-5 {
-    background-image: var(--pozadi);
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), var(--pozadi);
     min-height: 90px;
     width: 100%;
     background-size: cover;
@@ -124,4 +124,57 @@ h3 {
 
 .paticka {
     display: none;
+}
+
+@media screen and (min-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .hlavni-recept {
+        min-height: 250px;
+        padding: 1.25rem;
+    }
+
+    .recept-2, 
+    .recept-3, 
+    .recept-4,
+    .recept-5 {
+        min-height: 150px;
+        flex-basis: 50%;
+        padding: 1.25rem;
+    }
+
+    .male-recepty {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .recept-2 {
+        order: 0;
+        border-right: solid 0.1rem; 
+    }
+    .recept-4 {
+        order: 1;
+    }
+
+    .recept-3 {
+        order: 2;
+        border-right: solid 0.1rem; 
+    }
+
+    .recept-5 {
+        order: 3;
+    }
+
+    .pravy {
+        right: 1.25rem;
+        top: 1.25rem;
+}
 }
