@@ -17,11 +17,10 @@ středně široké obrazovky:
 }
 */
 
-
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
-    text-shadow: 1px 1px 5px black;
+    text-shadow: 2px 2px 5px black;
 }
 
 .paticka {
