@@ -21,181 +21,163 @@ body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
     text-shadow: 2px 2px 5px black;
+    color: var(--color);
 }
 
 .paticka {
     text-align: center;
     font-size: 14px;
     color: silver;
+    display: none;
 }
 
 .paticka a {
     color: silver;
 }
 
-
-/* ------------------------------- */
-/* ----- DOLE BUDE TVOJE CSS ----- */
-/* ------------------------------- */
-
 :root {
     --color:white;
 }
 
-h1 {
-    font-family:'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 1.75rem;
-    position: absolute;
-    bottom:0;
-    margin-bottom: 0.5rem;
+.recept {
+    display: flex ;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 0.5rem;
 }
 
-h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 1.2rem;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 0.5rem;
-}
-
-h3 {
-    font-family: 'Source Sans Pro', sans-serif;
+.recept a {
+    text-decoration: none;
+    color: var(--color);
     font-weight: 400;
     font-size: 0.8rem;
-    margin-top: 0;
 }
 
-.hlavni-recept {
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(images/burger.jpg);
+.recept-odkazy {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.recept-velky {
+    --pozadi: url(images/burger.jpg);
+}
+
+.recept-maly1 {
+    --pozadi: url(images/sushi.jpg);
+}
+
+.recept-maly2 {
+    --pozadi: url(images/rajcata.jpg);
+}
+
+.recept-maly3 {
+    --pozadi: url(images/kure.jpg);
+}
+
+.recept-maly4 {
+    --pozadi: url(images/grilovani.jpg)
+}
+
+.recept-velky {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), var(--pozadi);
     min-height: 200px;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
-    padding: 0.5rem;
-    color: var(--color);
 }
 
-.pravy {
-    position: absolute;
-    right: 0.5rem;
-    top: 0.5rem;
-}
-
-.levy {
-    position: absolute;
-}
-
-.recept-2 {
-    --pozadi: url(images/sushi.jpg);
-}
-
-.recept-3 {
-    --pozadi: url(images/rajcata.jpg);
-}
-
-.recept-4 {
-    --pozadi: url(images/kure.jpg);
-}
-
-.recept-5 {
-    --pozadi: url(images/grilovani.jpg);
-}
-
-.recept-2, 
-.recept-3, 
-.recept-4,
-.recept-5 {
+.recept-maly1,
+.recept-maly2,
+.recept-maly3,
+.recept-maly4 {
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), var(--pozadi);
     min-height: 90px;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: var(--color);
-    position: relative;
-    padding: 0.5rem;
     border-top: solid 0.1rem;
 }
 
-.paticka {
-    display: none;
+h2 {
+    margin:0;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.recept-velky h2 {
+    font-size: 1.75rem;
 }
 
 @media screen and (min-width: 480px) {
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 1.25rem;
-    }
-
     h2 {
         font-size: 1.5rem;
-        margin-bottom: 1.25rem;
     }
 
-    .hlavni-recept {
+    .recept-velky h2 {
+        font-size: 2rem;
+    }
+
+    .recept-velky {
         min-height: 250px;
-        padding: 1.25rem;
     }
 
-    .recept-2, 
-    .recept-3, 
-    .recept-4,
-    .recept-5 {
+    .recept-maly1,
+    .recept-maly2,
+    .recept-maly3,
+    .recept-maly4 {
         min-height: 150px;
         flex-basis: 50%;
-        padding: 1.25rem;
     }
-
-    .male-recepty {
+    
+    .recepty-male {
         display: flex;
         flex-wrap: wrap;
     }
-
-    .recept-2 {
-        order: 0;
-        border-right: solid 0.1rem; 
-    }
-    .recept-4 {
+    
+    .recept-maly1 {
         order: 1;
     }
 
-    .recept-3 {
-        order: 2;
-        border-right: solid 0.1rem; 
-    }
-
-    .recept-5 {
+    .recept-maly2 {
         order: 3;
     }
 
-    .pravy {
-        right: 1.25rem;
-        top: 1.25rem;
+    .recept-maly3 {
+        order: 2;
+        border-left: solid 0.1rem; 
+    }
+
+    .recept-maly4 {
+        order: 4;
+        border-left: solid 0.1rem; 
+    }
+
+    .recept {
+        padding: 1.25rem;
     }
 }
 
 @media screen and (min-width: 860px) {
-    h1 {
-        font-size: 3rem;
-    }
-
     h2 {
         font-size: 1.75rem;
     }
 
-    .hlavni-recept {
-        min-height: 400px;
-        min-width: 400px;
+    .recept-velky h2 {
+        font-size: 3rem;
     }
 
-    .recept-2, 
-    .recept-3, 
-    .recept-4,
-    .recept-5 {
+    .recept-velky {
+        min-height: 400px;
+        min-height: 400px;
+    }
+
+    .recept-maly1,
+    .recept-maly2,
+    .recept-maly3,
+    .recept-maly4 {
         min-height: 200px;
         min-width: 200px;
         flex-basis: 50%;
@@ -205,5 +187,9 @@ h3 {
     body {
         display: flex;
         justify-content: center;
+    }
+    .recept-maly1,
+    .recept-maly3 {
+        border-top: none;
     }
 }
